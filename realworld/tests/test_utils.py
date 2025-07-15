@@ -3,6 +3,11 @@ from unittest.mock import patch, MagicMock
 from flask import Flask
 import jwt
 import os
+import sys
+from pathlib import Path
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 class TestAuthenticationMiddleware(unittest.TestCase):
 
